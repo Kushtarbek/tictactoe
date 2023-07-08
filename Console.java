@@ -41,7 +41,7 @@ public class Console {
     }
 
     public static void initGame() {
-        for( int row = i; row < ROWS; ++row){
+        for( int row = 0; row < ROWS; ++row){
             for( int col = 0; col < COLS; ++col){
                 board[row][col] = NO_SEED;
             }
@@ -79,8 +79,40 @@ public class Console {
                 || selectedRow + selectedCol == 2 && board[0][2] == player && board[1][1] == player && board[2][0] == player ){
             return (player == CROSS) ? CROSS_WON : NOUGHT_WON;
         }else {
-
+            for( int row = 0; row < ROWS; ++row){
+                for( int col = 0; col < COLS; ++ col){
+                    if(board[row][col] == NO_SEED){
+                        return PLAYING;
+                    }
+                }
+            }
+            return DRAW;
         }
-        )
+    }
+    public static void paintBoard(){
+        for (int row = 0; row < ROWS; ++row) {
+            for (int col = 0; col < COLS; ++col) {
+                paintCell(board[row][col]);
+                if(col != COLS -1){
+                    System.out.println("|");
+                }
+            }
+            System.out.println();
+            if(row != ROWS -1){
+                System.out.println("----------");
+            }
+        }
+        System.out.println();
+    }
+
+    public static void paintCell( int content){
+        switch (content){
+            case CROSS:
+                System.out.println("X");
+            case NOUGHT:
+                System.out.println("O");
+            case NO_SEED:
+                System.out.println("   ");
+        }
     }
 }
