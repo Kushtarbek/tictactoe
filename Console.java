@@ -52,6 +52,7 @@ public class Console {
 
     public static void stepGame(){
         boolean validInput = false;
+        System.out.println("We are starting the game!!!");
         do{
             if(currentPlayer == CROSS){
                 System.out.println("Player 'X', enter your move (row[1-3] column[1-3]): " );
@@ -112,7 +113,7 @@ public class Console {
             case NOUGHT:
                 System.out.println("O");
             case NO_SEED:
-                System.out.println("   ");
+                System.out.println(" ");
         }
     }
 }
