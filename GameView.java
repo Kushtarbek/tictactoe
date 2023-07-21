@@ -43,7 +43,7 @@ public class GameView {
         {
             for (int j = 0; j < matrixCol; j++)
             {
-                System.out.print(matrix[i][j]);
+                System.out.print(matrix[i][j]+" ");
             }
 
             System.out.println();

@@ -2,6 +2,16 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class GameController {
+    public static final int CROSS = 0;
+    public static final int Zero = 0;
+    public static int currentPlayer;
+    public static int DRAW;
+    public static final int ROWS = 3, COLS = 3;
+    public static int [][] board = new int [ROWS][COLS];
+
+
+
+
     public static void print2D(int mat[][])
     {
         for (int[] row : mat)
@@ -19,9 +29,21 @@ public class GameController {
             }
         }
     }
+    static Scanner sc = new Scanner(System.in);
+
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Please go ahead: ");
+        do{
+            if(currentPlayer == CROSS){
+                System.out.println("Game has started! Player 1, enter your move: ");
+            }else{
+                System.out.println("Player 2, enter your move: ");
+            }
+            int row = sc.nextInt()-1;
+            int col = sc.nextInt()-1;
+            if(row >= 0 && row < ROWS && col >= 0 && col < COLS ){
+
+            }
+        }
         System.out.println(sc.nextLine());
         int[][] matrix = new int[3][3];
         for (int r = 0; r < 3; r++) {
