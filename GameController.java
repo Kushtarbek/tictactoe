@@ -4,18 +4,20 @@ import java.util.Scanner;
 public class GameController {
     public static void print2D(int mat[][])
     {
-        // Loop through all rows
-//        for (int i = 0; i < mat.length; i++)
-//
-//            // Loop through all elements of current row
-//            for (int j = 0; j < mat[i].length; j++)
-//                System.out.print(mat[i][j] + " ");
         for (int[] row : mat)
-
             // converting each row as string
             // and then printing in a separate line
             System.out.println(Arrays.toString(row));
 
+    }
+
+    public static void enterMatrixData(Scanner scan, int [][] matrix, int matrixRow, int matrixCol){
+        System.out.println("Enter matrix data");
+        for( int i =0; i< matrixRow; i++){
+            for( int j = 0; j<matrixCol; j++){
+
+            }
+        }
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
