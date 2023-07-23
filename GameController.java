@@ -7,31 +7,32 @@ public class GameController {
     public static int currentPlayer;
     public static int DRAW;
     public static final int ROWS = 3, COLS = 3;
-    public static int [][] board = new int [ROWS][COLS];
+    public static int[][] board = new int[ROWS][COLS];
 
 
-
-
-    public static void print2D(int mat[][])
-    {
+    public static void print2D(int mat[][]) {
         for (int[] row : mat)
             // converting each row as string
             // and then printing in a separate line
-            System.out.println(Arrays.toString(row));
+            System.out.println("result 17" + Arrays.toString(row));
+
 
     }
 
-    public static void enterMatrixData(Scanner scan, int [][] matrix, int matrixRow, int matrixCol){
-        System.out.println("Enter matrix data");
-        for( int i =0; i< matrixRow; i++){
-            for( int j = 0; j<matrixCol; j++){
 
-            }
-        }
-    }
-    static Scanner sc = new Scanner(System.in);
+
+//    public static void enterMatrixData(Scanner scan, int [][] matrix, int matrixRow, int matrixCol){
+//        System.out.println("Enter matrix data");
+//        for( int i =0; i< matrixRow; i++){
+//            for( int j = 0; j<matrixCol; j++){
+//
+//            }
+//        }
+//    }
+     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
+        boolean validInput = false;
         do{
             if(currentPlayer == CROSS){
                 System.out.println("Game has started! Player 1, enter your move: ");
@@ -40,11 +41,14 @@ public class GameController {
             }
             int row = sc.nextInt()-1;
             int col = sc.nextInt()-1;
-            if(row >= 0 && row < ROWS && col >= 0 && col < COLS ){
-
+            if(row >= 0 && row < ROWS && col >= 0 && col < COLS){
+                validInput = true;
+            }else{
+                System.out.println("This move is not valid. Try again ...");
             }
-        }
-        System.out.println(sc.nextLine());
+        }while( !validInput);
+
+        System.out.println("51 "+sc.nextLine());
         int[][] matrix = new int[3][3];
         for (int r = 0; r < 3; r++) {
             for (int c = 0; c < 3; c++) {
@@ -52,7 +56,7 @@ public class GameController {
                 matrix[r][c] = sc.nextInt();
             }
         }
-        System.out.println(matrix);
+        System.out.println("59 "+matrix);
         print2D(matrix);
     }
 }
