@@ -48,7 +48,7 @@ public class GameController {
             }
         }while( !validInput);
 
-        System.out.println("51 "+sc.nextLine());
+        System.out.println(sc.nextLine());
         int[][] matrix = new int[3][3];
         for (int r = 0; r < 3; r++) {
             for (int c = 0; c < 3; c++) {
