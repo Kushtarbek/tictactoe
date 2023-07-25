@@ -1,3 +1,5 @@
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -14,21 +16,15 @@ public class GameController {
         for (int[] row : mat)
             // converting each row as string
             // and then printing in a separate line
-            System.out.println("result 17" + Arrays.toString(row));
+            System.out.println( Arrays.toString(row));
 
 
     }
 
 
 
-//    public static void enterMatrixData(Scanner scan, int [][] matrix, int matrixRow, int matrixCol){
-//        System.out.println("Enter matrix data");
-//        for( int i =0; i< matrixRow; i++){
-//            for( int j = 0; j<matrixCol; j++){
-//
-//            }
-//        }
-//    }
+
+     @SuppressFBWarnings("DM_DEFAULT_ENCODING")
      static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -56,7 +52,7 @@ public class GameController {
                 matrix[r][c] = sc.nextInt();
             }
         }
-        System.out.println("59 "+matrix);
+        System.out.println(matrix);
         print2D(matrix);
     }
 }

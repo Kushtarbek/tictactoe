@@ -1,5 +1,3 @@
-package com.Kushtarbek;
-
 public class Game {
     private final char [][] board = {
             {' ', '|', ' ', '|', ' '},

@@ -1,15 +1,14 @@
 import java.util.Scanner;
 
 public class GameView {
+    @edu.umd.cs.findbugs.annotations.SuppressFBWarnings("DM_DEFAULT_ENCODING")
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
         System.out.println("Enter The Number Of Matrix Rows");
-
         int matrixRow = scan.nextInt();
 
         System.out.println("Enter The Number Of Matrix Columns");
-
         int matrixCol = scan.nextInt();
 
         //defining 2D array to hold matrix data

@@ -1,5 +1,3 @@
-package com.Kushtarbek;
-
 import java.util.Random;
 
 public class Computer {
@@ -62,7 +60,7 @@ public class Computer {
             }
             for(char i=0; i<placements.length; i++){
                 if(placements[i] == ' '){
-                    score += minimax(i, placements, true)
+                    score += minimax(i, placements, true);
                 }
             }
         }
