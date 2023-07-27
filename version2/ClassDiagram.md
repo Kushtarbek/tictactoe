@@ -1,6 +1,6 @@
     TicTacToe Game 
 -Attributes
-    
+
     -Board: char [3] [3];
 
     -CurrentPlayer: char;
