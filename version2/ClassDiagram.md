@@ -43,3 +43,5 @@ TicTacToeGame: This class represents the Tic Tac Toe game. It contains the game 
 
 + isGameOver(): boolean: A method that checks if the game is over either due to a win or a draw.
 
+
+![UML diagram for tictactoe](https://github.com/Kushtarbek/tictactoe/assets/44345257/86dbeb55-25c4-4a73-a23b-ddb97e8a93f8)
